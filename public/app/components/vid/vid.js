@@ -45,7 +45,7 @@ class Myvid extends HTMLElement {
             <div class= "vid">
     <video class="mast">${this.video}</video>
     <img class="heart" src="${this.heart}">
-    <p3><strong>${this.likes}</strong></p1>
+    <p3><strong>${this.likes}</strong></p3>
     <img class="comment" src="${this.comment}">
     <img class="share" src="${this.share}">
     <img class="profpic" src="${this.profpic}">

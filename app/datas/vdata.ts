@@ -22,3 +22,4 @@ const vdata: DataShape[]= [
 
     },
 ]
+export default vdata;

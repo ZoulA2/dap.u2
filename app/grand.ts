@@ -32,7 +32,7 @@ this.container2.push(videoformat);
 
     render(){
 this.shadowRoot!.innerHTML =`
-<link rel="stylesheet" href="./app/components/vid/vid.css"
+<link rel="stylesheet" href="./app/components/vid/vid.css">
 `
 const videoformats = this.ownerDocument.createElement("section");
 videoformats.className ='vforcontainer'
@@ -47,13 +47,13 @@ this.shadowRoot?.appendChild(videoformats);
     video.src = 'https://archive.org/download/C.E.PriceCatWalksTowardCamera/cat_walks_toward_camera_512kb.mp4'
     video.controls = true;
     video.muted = false;
-    video.height = 240;
-    video.width = 320;
+    video.height = 200;
+    video.width = 300;
 
-    const box = document.getElementById('box');
+    const vidbox = document.getElementById('vidbox');
 
 
-    box?.appendChild(video);
+    vidbox?.appendChild(video);
 
 
 

@@ -130,15 +130,15 @@
     render(){
         if (this.shadowRoot){
             this.shadowRoot.innerHTML = `
-            <div class= "vid">
-
+            <link rel="stylesheet" href="./app/components/vid/vid.css"
+            <div class= "vi">
     <img class="heart" src="${this.heart}">
     <p3><strong>${this.like}</strong></p3>
     <img class="comment" src="${this.comment}">
     <img class="share" src="${this.share}">
     <img class="profpic" src="${this.profpic}">
-    <p1><strong>${this.profname}</strong></p1>
-    <p2><strong>${this.videsc}</strong></p2>
+    <p1 class="nam"><strong>${this.profname}</strong></p1>
+    <p2>${this.videsc}</p2>
             </div>`
         }
     }

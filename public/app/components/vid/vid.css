@@ -1,0 +1,64 @@
+#vidbox{
+
+height: 250px;
+width: 350px;
+
+margin-top: -100px;
+padding-left: 650px;
+z-index: 1;
+
+}
+
+.vforcontainer{
+
+    z-index: 2;
+    margin-top: -330px;
+    margin-left: 600%;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+
+
+.heart{
+
+    width: 50px;
+    height: 50px;
+
+
+}
+.share{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: -30px;
+
+
+}
+.comment{
+
+    width: 50px;
+    height: 50px;
+    padding-bottom: 30px;
+}
+.profpic{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: -550px;
+    margin-top: 120px;
+
+}
+
+.nam{
+    padding-top: 300px;
+}
+
+
+
+
+
+
+

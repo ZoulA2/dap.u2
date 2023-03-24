@@ -116,6 +116,7 @@ class Myvid extends HTMLElement {
     render() {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
+            <link rel="stylesheet" href="./app/components/vid/vid.css"
             <div class= "vid">
 
     <img class="heart" src="${this.heart}">

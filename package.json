@@ -1,0 +1,16 @@
+{
+  "name": "dap.u2",
+  "version": "1.0.0",
+  "description": "page made for DCA",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch",
+    "serve": "serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

@@ -12,13 +12,13 @@ interface DataShape {
 const vdata: DataShape[]= [
     {
         video: "./videos/Mastodon.mp4",
-        heart: "",
-        likes: "",
-        comment: "",
-        share: "",
-        profpic: "",
-        profname:"",
-        videsc:"",
+        heart: "./imgN/heart.png",
+        likes: "4500",
+        comment: "./imgN/comments.png",
+        share: "./imgN/arrow.png",
+        profpic: "./imgN/cat.jpg",
+        profname:"Meliani Siti S",
+        videsc:"MASTODON - Blood and Thunder (Mel cover)",
 
     },
 ]

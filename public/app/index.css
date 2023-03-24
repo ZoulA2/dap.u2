@@ -76,7 +76,16 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     z-index: 10;
+}
 
+.searchMessage{
+    position: absolute;
+    top: 675px;
+    left: 300px;
+    background-color: #E8E8E8;;
+    width: 350px;
+    height: 45px;
+    z-index: 5;
 
 }
 
@@ -111,6 +120,7 @@
     flex-direction: row;
     justify-content: center;
     justify-self: first baseline;
+    background-color: black;
     
 }
 
@@ -138,6 +148,7 @@
     width: 0px;
     height: 0px;  
 }
+
 
 /*responsive**/
 @media (max-width:600px){
@@ -219,12 +230,14 @@
 @media (max-width:600px){
     .bar-icons{
         position: absolute;
+        margin-left: 2px;
+        
         width: 100%;
         height: 70px;
         padding-top: 15px;
         padding-bottom: 15px;
         background-color: black;
-        bottom: 0;
+        top: 600px;
     } 
 }
 
@@ -303,4 +316,55 @@
     } 
 }
 
+@media (max-width:600px){
+    .blackCont{
+        position: absolute;
+        top: 178px;
+        left: 300px;
+       
+        width: 0px;
+        height: 0px;
+        z-index: 5;
+    } 
+}
+
+@media (max-width:600px){
+    .messagecont{
+        position: absolute;
+        top: 195px;
+        left: 311px;
+        color: transparent;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0px;
+        z-index: 10;
+    }
+}
+
+@media (max-width:600px){
+    .searchMessage{
+        position: absolute;
+        top: 675px;
+        left: 300px;
+        background-color: transparent;
+        width: 0px;
+        height: 0px;
+        z-index: 5;
+    }
+}
+@media (max-width:600px){
+    .icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-self: first baseline;
+        background-color: black;
+        height: 90px;
+        width: 300px;
+        padding-left: 40px;
+        padding-right: 70px;
+       
+        
+    }
+    
+}
 

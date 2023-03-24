@@ -77,8 +77,8 @@ this.shadowRoot?.appendChild(messageformats);
     video.src = 'https://archive.org/download/C.E.PriceCatWalksTowardCamera/cat_walks_toward_camera_512kb.mp4'
     video.controls = true;
     video.muted = false;
-    video.height = 200;
-    video.width = 300;
+    video.height = 650;
+    video.width = 600;
 
     const vidbox = document.getElementById('vidbox');
 

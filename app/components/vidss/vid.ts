@@ -131,7 +131,7 @@
         if (this.shadowRoot){
             this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="./app/components/vid/vid.css"
-            <div class= "vi">
+            <div class= "vid">
     <img class="heart" src="${this.heart}">
     <p3><strong>${this.like}</strong></p3>
     <img class="comment" src="${this.comment}">

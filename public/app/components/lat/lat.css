@@ -12,10 +12,6 @@ position: absolute;
 
 }
 
-
-
-
-
 #sidebar ul li {
    margin-top: 20px;
     padding: 30px 20px;
@@ -37,11 +33,42 @@ position: absolute;
      color: white; text-shadow: rgba(246, 209, 42, 0.924) 0.2em 0.2em 0.5em;
  }
 
-
-
 .homi{
     padding-left: 10px;
     height: 30px;
     width: 50px;
 }
+
+/*responsive**/
+@media (max-width:600px){
+    #sidebar {
+        margin-top: -90px;
+    position: absolute;
+       width: 0px;
+       height: 0px;
+       background-color: transparent;
+    }
+}
+
+@media (max-width:600px){
+    .homi{
+        padding-left: 10px;
+        height: 0px;
+        width: 0px;
+    }
+}
+
+@media (max-width:600px){
+    #sidebar ul li {
+        margin-top: 20px;
+         padding: 30px 20px;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 0px;
+         font-weight: bold;
+         color: transparent;
+         text-decoration: underline;
+     }
+}
+
+
 

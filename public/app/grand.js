@@ -67,6 +67,7 @@ class appcontainer extends HTMLElement {
     (_a = this.shadowRoot)=== null || _a === void 0 ? void 0 : _a.appendChild(messageformats);
     }
 }
+
 const video = document.createElement('video');
 video.src = 'https://archive.org/download/C.E.PriceCatWalksTowardCamera/cat_walks_toward_camera_512kb.mp4';
 video.controls = true;

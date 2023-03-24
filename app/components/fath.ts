@@ -1,0 +1,1 @@
+export {default as Myvid} from "./vid/vid.js";

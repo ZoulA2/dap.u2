@@ -1,5 +1,5 @@
-import { Attribute2 } from "./components/vid/vid.js";
-import vdata from "./datas/vdata.js";
+import { Attribute2 } from "./components/vidss/vid.js";
+import vdata from "./vdata.js";
 class appcontainer extends HTMLElement {
     constructor() {
         super();
@@ -7,9 +7,8 @@ class appcontainer extends HTMLElement {
         this.attachShadow({ mode: "open" });
         vdata.forEach((user) => {
             const videoformat = this.ownerDocument.createElement("my-vid");
-            videoformat.setAttribute(Attribute2.video, user.video);
             videoformat.setAttribute(Attribute2.heart, user.heart);
-            videoformat.setAttribute(Attribute2.likes, user.likes);
+            videoformat.setAttribute(Attribute2.like, user.likes);
             videoformat.setAttribute(Attribute2.comment, user.comment);
             videoformat.setAttribute(Attribute2.share, user.share);
             videoformat.setAttribute(Attribute2.profpic, user.profpic);
@@ -24,7 +23,7 @@ class appcontainer extends HTMLElement {
     render() {
         var _a;
         this.shadowRoot.innerHTML = `
-<link rel="stylesheet" href="./components/vid/vid.css">
+<link rel="stylesheet" href="./app/components/vid/vid.css"
 `;
         const videoformats = this.ownerDocument.createElement("section");
         videoformats.className = 'vforcontainer';
@@ -34,4 +33,12 @@ class appcontainer extends HTMLElement {
         (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(videoformats);
     }
 }
+const video = document.createElement('video');
+video.src = 'https://archive.org/download/C.E.PriceCatWalksTowardCamera/cat_walks_toward_camera_512kb.mp4';
+video.controls = true;
+video.muted = false;
+video.height = 240;
+video.width = 320;
+const box = document.getElementById('box');
+box === null || box === void 0 ? void 0 : box.appendChild(video);
 customElements.define("app-container", appcontainer);

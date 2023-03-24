@@ -1,9 +1,15 @@
 import { Attribute2 } from "./components/vidss/vid.js";
 import vdata from "./vdata.js";
+
+import Messagecont, { Attribute1 } from "./components/message/message.js";
+import messageData from "./messageData.js";
+
 class appcontainer extends HTMLElement {
     constructor() {
         super();
         this.container2 = [];
+        this.container1 = [];
+        
         this.attachShadow({ mode: "open" });
         vdata.forEach((user) => {
             const videoformat = this.ownerDocument.createElement("my-vid");
@@ -16,6 +22,23 @@ class appcontainer extends HTMLElement {
             videoformat.setAttribute(Attribute2.videsc, user.videsc);
             this.container2.push(videoformat);
         });
+
+        messageData.forEach((user) => {
+            const messageformat = this.ownerDocument.createElement(
+                "message-contentcard"
+            );
+
+            messageformat.setAttribute(Attribute1.profile, user.profile);
+            messageformat.setAttribute(Attribute1.comment, user.comment);
+            messageformat.setAttribute(Attribute1.name, user.name);
+            messageformat.setAttribute(Attribute1.days, user.days);
+
+            
+    this.container1.push(messageformat);
+    });
+
+        
+
     }
     connectedCallback() {
         this.render();
@@ -24,6 +47,10 @@ class appcontainer extends HTMLElement {
         var _a;
         this.shadowRoot.innerHTML = `
 <link rel="stylesheet" href="./app/components/vid/vid.css">
+<<<<<<< Updated upstream
+=======
+<link rel="stylesheet" href="./app/components/message/message.css">
+>>>>>>> Stashed changes
 `;
         const videoformats = this.ownerDocument.createElement("section");
         videoformats.className = 'vforcontainer';
@@ -31,6 +58,13 @@ class appcontainer extends HTMLElement {
             videoformats.appendChild(videoformat);
         });
         (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(videoformats);
+
+        const messageformats = this.ownerDocument.createElement("section");
+        messageformats.className ='Mcontent';
+        this.container1.forEach((messageformat) => {
+        messageformats.appendChild(messageformat);
+    });
+    (_a = this.shadowRoot)=== null || _a === void 0 ? void 0 : _a.appendChild(messageformats);
     }
 }
 const video = document.createElement('video');

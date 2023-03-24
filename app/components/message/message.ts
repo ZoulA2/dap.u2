@@ -49,8 +49,11 @@ class Messagecard extends HTMLElement{
             <div class="message-containercard">
             <img class="imag" src="${this.profile}">
             <p1><strong>${this.comment}</strong></p1>
-            <h2>${this.name}</h2>
+            <div class="name-day">
+            <h2>${this.name}</h2><h1>${this.days}</h1>
             </div>
+            </div>
+            
             
             
             `

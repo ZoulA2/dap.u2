@@ -3,8 +3,13 @@ import * as components from "./components/fath.js"
 import videocontent, { Attribute2 } from "./components/vidss/vid.js";
 import vdata from "./vdata.js";
 
+import messageData from "./messageData.js";
+import Messagecont, { Attribute1 } from "./components/message/message.js";
+
+
  class appcontainer extends HTMLElement {
     container2: components.Myvid[] = [];
+    container1: components.Message[] = [];
 
     constructor(){
         super();
@@ -25,6 +30,20 @@ import vdata from "./vdata.js";
 this.container2.push(videoformat);
             });
 
+            messageData.forEach((user) => {
+                const messageformat = this.ownerDocument.createElement(
+                    "message-contentcard"
+                ) as components.Message;
+
+                messageformat.setAttribute(Attribute1.profile, user.profile);
+                messageformat.setAttribute(Attribute1.comment, user.comment);
+                messageformat.setAttribute(Attribute1.name, user.name);
+                messageformat.setAttribute(Attribute1.days, user.days);
+
+                
+this.container1.push(messageformat);
+            });
+
     }
     connectedCallback(){
         this.render();
@@ -33,6 +52,10 @@ this.container2.push(videoformat);
     render(){
 this.shadowRoot!.innerHTML =`
 <link rel="stylesheet" href="./app/components/vid/vid.css">
+<<<<<<< Updated upstream
+=======
+<link rel="stylesheet" href="./app/components/message/message.css">
+>>>>>>> Stashed changes
 `
 const videoformats = this.ownerDocument.createElement("section");
 videoformats.className ='vforcontainer'
@@ -40,6 +63,13 @@ this.container2.forEach((videoformat) => {
     videoformats.appendChild(videoformat);
 })
 this.shadowRoot?.appendChild(videoformats);
+
+const messageformats = this.ownerDocument.createElement("section");
+messageformats.className ='Mcontent'
+this.container1.forEach((messageformat) => {
+    messageformats.appendChild(messageformat);
+})
+this.shadowRoot?.appendChild(messageformats);
     }
     }
 
